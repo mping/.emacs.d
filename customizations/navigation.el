@@ -46,6 +46,10 @@
 ;; for selecting buffer and file names
 (ido-ubiquitous-mode 1)
 
+;; dired sorting
+;; http://www.emacswiki.org/emacs/DiredSorting#toc1
+(setq dired-listing-switches "-aBhl  --group-directories-first")
+
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 

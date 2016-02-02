@@ -29,7 +29,8 @@
 
 (load-theme 'solarized t)
 
- (set-face-attribute 'default nil :family "UbuntuMono" :height 140 :weight 'normal)
+;;(set-face-attribute 'default nil :family "SourceCodePro" :height 130 :weight 'normal)
+(set-face-attribute 'default nil :family "UbuntuMono" :height 140 :weight 'bold)
 
 ;;(load-theme 'tomorrow-night-bright t)
 ;;(load-theme 'solarized t)
@@ -38,7 +39,7 @@
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
 ;; (in lines high) Emacs will have whenever you start it
-;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 177) (height . 53)))
+(setq initial-frame-alist '((top . 100) (left . 100) (width . 140) (height . 40)))
 
 ;; These settings relate to how emacs interacts with your operating system
 (setq ;; makes killing/yanking interact with the clipboard
