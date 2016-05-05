@@ -27,14 +27,14 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
 
-(load-theme 'solarized t)
-
-;;(set-face-attribute 'default nil :family "SourceCodePro" :height 130 :weight 'normal)
-(set-face-attribute 'default nil :family "UbuntuMono" :height 140 :weight 'bold)
-
-;;(load-theme 'tomorrow-night-bright t)
 ;;(load-theme 'solarized t)
 
+;;(set-face-attribute 'default nil :family "SourceCodePro" :height 140 :weight 'normal)
+(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
+
+;; lets try ST3 theme for a while...
+(load-theme 'monokai t)
+;;(load-theme 'solarized t)
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
