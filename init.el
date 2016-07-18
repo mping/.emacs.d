@@ -27,6 +27,11 @@
 ;; This also sets the load path.
 (package-initialize)
 
+
+(when (eq system-type 'darwin)
+  (require 'ls-lisp)
+  (setq ls-lisp-use-insert-directory-program nil))
+
 ;; Download the ELPA archive description if needed.
 ;; This informs Emacs about the latest versions of all packages, and
 ;; makes them available for download.
@@ -73,6 +78,9 @@
 
     ;; edit html tags like sexps
     tagedit
+
+    ;;tabbar
+    tabbar
 
     ;; git integration
     magit))
@@ -144,6 +152,7 @@
 
 ;;tabbar
 (load "setup-tabbar.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

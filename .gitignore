@@ -10,3 +10,5 @@ auto-save-list
 backups
 session.*
 elpa/
+SessionDesktop.el
+history

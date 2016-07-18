@@ -78,3 +78,8 @@
 ;;(setq company-idle-delay nil) ; never start completions automatically
 ;;(global-set-key (kbd "M-TAB") #'company-complete) ; use meta+tab, aka C-M-i, as manual trigger
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
+
+;; set CMD as alt, alt as nothing
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
