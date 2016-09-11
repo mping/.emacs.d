@@ -69,6 +69,15 @@
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
 
+;; allow normal []{}[] chars in mac os
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
+
+;; switch alt and cmd
+(setq mac-command-modifier 'meta)
+
+
 (setq electric-indent-mode nil)
 
 ;; global enable company
