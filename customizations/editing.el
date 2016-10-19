@@ -70,10 +70,11 @@
     (quit nil)))
 
 ;; allow normal []{}[] chars in mac os
-(setq mac-option-modifier nil
+;; use karabiner to remap command_l <> option_l
+(setq mac-option-modifier nil     
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
-
+ß
 
 (setq electric-indent-mode nil)
 
@@ -85,7 +86,3 @@
 ;;(global-set-key (kbd "M-TAB") #'company-complete) ; use meta+tab, aka C-M-i, as manual trigger
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
-;; set CMD as alt, alt as nothing
-(setq mac-option-modifier nil
-      mac-command-modifier 'meta
-      x-select-enable-clipboard t)
