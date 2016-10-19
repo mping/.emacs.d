@@ -74,9 +74,6 @@
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
-;; switch alt and cmd
-(setq mac-command-modifier 'meta)
-
 
 (setq electric-indent-mode nil)
 
