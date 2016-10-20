@@ -70,11 +70,11 @@
     (quit nil)))
 
 ;; allow normal []{}[] chars in mac os
-;; use karabiner to remap command_l <> option_l
-;; make sure iterm2 has "Left Option key acts as +Esc" in general->profiles->keys
-;;(setq mac-option-modifier nil
-;;      mac-command-modifier 'meta
-;;      x-select-enable-clipboard t)
+;; in iTerm, make sure Preferences->Keys says left command -> left option, and left option -> left command
+;; in iTerm, make sure Preferences->Profile->Keys says "left option key act as +Esc"
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
 
 
 (setq electric-indent-mode nil)
