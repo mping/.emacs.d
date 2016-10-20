@@ -42,7 +42,7 @@
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
 (setq auto-save-default nil)
-
+      
 
 ;; comments
 (defun toggle-comment-on-line ()
@@ -71,10 +71,11 @@
 
 ;; allow normal []{}[] chars in mac os
 ;; use karabiner to remap command_l <> option_l
-(setq mac-option-modifier nil     
-      mac-command-modifier 'meta
-      x-select-enable-clipboard t)
-ß
+;; make sure iterm2 has "Left Option key acts as +Esc" in general->profiles->keys
+;;(setq mac-option-modifier nil
+;;      mac-command-modifier 'meta
+;;      x-select-enable-clipboard t)
+
 
 (setq electric-indent-mode nil)
 
