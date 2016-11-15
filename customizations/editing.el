@@ -76,6 +76,18 @@
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
+;; in iTerm -> remap modifier keys -> swap left command and left option
+;; then in keymappings ->
+;; add a key binding, *first* choose “do not remap modifiers” then type the actual shortcut
+;; it will appear as the “real” keys even if you swapped left alt and left cmd
+(add-hook 'after-make-frame-functions
+  (lambda ()
+    ;; if we're in terminal mode, rebind the Cmd to meta
+    (if (not (display-graphic-p))
+      (progn
+        
+        ))))
+
 
 (setq electric-indent-mode nil)
 
