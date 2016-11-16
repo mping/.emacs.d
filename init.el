@@ -60,6 +60,9 @@
     ;; complete anything mode
     company
 
+    ;;erlang
+    ;; edts
+
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description
     ;; of ido
@@ -78,9 +81,6 @@
 
     ;; edit html tags like sexps
     tagedit
-
-    ;;tabbar
-    tabbar
 
     ;; git integration
     magit))
@@ -145,13 +145,11 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
-;; Langauage-specific
+;; Language-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-markdown.el")
-
-;;tabbar
-(load "setup-tabbar.el")
+(load "setup-erlang.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
