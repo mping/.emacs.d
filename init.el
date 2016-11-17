@@ -61,7 +61,12 @@
     company
 
     ;;erlang
-    edts
+    ;; edts
+    popup
+    flycheck
+    flycheck-tip
+    flycheck-pos-tip
+
 
     ;; allow ido usage in as many contexts as possible. see
     ;; customizations/navigation.el line 23 for a description

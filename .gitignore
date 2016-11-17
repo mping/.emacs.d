@@ -12,3 +12,9 @@ session.*
 elpa/
 SessionDesktop.el
 history
+
+edts/
+distel/
+distel-company/
+distel-completion/
+ac-comphist.dat
