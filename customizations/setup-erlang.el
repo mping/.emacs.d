@@ -29,11 +29,11 @@
 (require 'company-distel)
 
 ;; disable edts while we try distel
-;; (add-hook 'after-init-hook 'setup-edts)
+(add-hook 'after-init-hook 'setup-edts)
 
-(add-hook 'after-init-hook 'setup-flycheck)
-(add-hook 'after-init-hook 'setup-distel)
-(add-hook 'after-init-hook 'setup-autocomplete)
+;; (add-hook 'after-init-hook 'setup-flycheck)
+;; (add-hook 'after-init-hook 'setup-distel)
+;; (add-hook 'after-init-hook 'setup-autocomplete)
 
 ;;;;
 ;; EDTS
