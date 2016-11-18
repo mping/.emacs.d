@@ -21,21 +21,26 @@
 (setq erlang-man-root-dir "/Users/mping/Devel/erlang/19.1/man")
 
 
+(push "~/.emacs.d/distel/elisp/" load-path)
+(push "~/.emacs.d/company-distel/" load-path)
+
+(require 'flycheck)
+(require 'distel)
+(require 'company-distel)
+
 ;; disable edts while we try distel
-;;(add-hook 'after-init-hook 'setup-edts)
+;; (add-hook 'after-init-hook 'setup-edts)
+
 (add-hook 'after-init-hook 'setup-flycheck)
 (add-hook 'after-init-hook 'setup-distel)
 (add-hook 'after-init-hook 'setup-autocomplete)
-
 
 ;;;;
 ;; EDTS
 ;;;;
 
 (defun setup-edts ()
-  (require 'edts-start)
-  ;;(add-to-list 'auto-mode-alist '("\\.erl.*$" . erlang-mode))
-  )
+  (require 'edts-start))
 
 
 ;;;;
@@ -47,7 +52,7 @@
 (defun setup-flycheck ()
 
 	;; flycheck for syntax validation
-	(require 'flycheck)
+	
 	(flycheck-define-checker erlang-otp
 	                         "An Erlang syntax checker using the Erlang interpreter."
 	                         :command ("erlc" "-o" temporary-directory "-Wall"
@@ -67,12 +72,14 @@
 	(with-eval-after-load 'flycheck (flycheck-pos-tip-mode)))
 
 ;; distel: > git clone https://github.com/massemanet/distel ~/.emacs/distel
+;; http://web.archive.org/web/20130827210416/http://bc.tech.coop/blog/070528.html
 (defun setup-distel ()
 	;; distel
 	;; prevent annoying hang-on-compile
 	(defvar inferior-erlang-prompt-timeout t)
 	;; default node name to emacs@localhost
 	(setq inferior-erlang-machine-options '("-sname" "emacs"))
+	(setq erlang-compile-extra-opts '(debug_info)) ;; so that when C-c C-k debug info is set up, no need do c("mod", [debug_info])
 	;; tell distel to default to that node
 	(setq erl-nodename-cache
 	      (make-symbol
@@ -83,18 +90,14 @@
 	        ;; ... but I only tested it on Mac OS X.
 	                (car (split-string (shell-command-to-string "hostname"))))))
 
-	(push "~/.emacs.d/distel/elisp/" load-path)
-	(require 'distel)
+
 	(distel-setup))
 
 
 ;; autocomplete: > git clone https://github.com/sebastiw/company-distel ~/.emacs/company-distel
 (defun setup-autocomplete ()
-	(push "~/.emacs.d/company-distel/" load-path)
-	(require 'company-distel)
 	(with-eval-after-load 'company
 		(add-to-list 'company-backends 'company-distel))
-
 	;;(add-hook 'erlang-mode-hook 'auto-complete-mode)
 	(add-hook 'erlang-mode-hook (lambda () (setq company-backends '(company-distel)))))
 
