@@ -1,5 +1,11 @@
-Shamelessly copied from https://github.com/flyingmachine/emacs.d
-I added my own settings
+Shamelessly copied from [flyingmachine](https://github.com/flyingmachine/emacs.d)
+I added my own settings:
+
+* clojure stuff (make sure to have an up-to-date ~/.lein/profile.clj)
+* erlang stuff (make sure to view ~/.emacs.d/customizations/setup-erlang.el, you will need to install and compile stuff)
+* removed stuff that I don't use
+
+Just git clone https://github.com/mping/.emacs.d ~/.emacs.d
 
 
 ----

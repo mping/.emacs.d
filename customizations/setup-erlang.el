@@ -13,6 +13,7 @@
 ;;;;
 
 
+;; use the adequate path
 (setq load-path (cons "/Users/mping/Devel/erlang/19.1/lib/tools-2.8.6/emacs" load-path))
 (require 'erlang-start)
 
@@ -29,11 +30,11 @@
 (require 'company-distel)
 
 ;; disable edts while we try distel
-(add-hook 'after-init-hook 'setup-edts)
+;; (add-hook 'after-init-hook 'setup-edts)
 
-;; (add-hook 'after-init-hook 'setup-flycheck)
-;; (add-hook 'after-init-hook 'setup-distel)
-;; (add-hook 'after-init-hook 'setup-autocomplete)
+(add-hook 'after-init-hook 'setup-flycheck)
+(add-hook 'after-init-hook 'setup-distel)
+(add-hook 'after-init-hook 'setup-autocomplete)
 
 ;;;;
 ;; EDTS
@@ -71,7 +72,7 @@
 	(setq flycheck-display-errors-function 'verbose)
 	(with-eval-after-load 'flycheck (flycheck-pos-tip-mode)))
 
-;; distel: > git clone https://github.com/massemanet/distel ~/.emacs/distel
+;; distel: > git clone https://github.com/massemanet/distel ~/.emacs.d/distel
 ;; http://web.archive.org/web/20130827210416/http://bc.tech.coop/blog/070528.html
 (defun setup-distel ()
 	;; distel
@@ -88,13 +89,12 @@
 	        ;; Mac OS X uses "name.local" instead of "name", this should work
 	        ;; pretty much anywhere without having to muck with NetInfo
 	        ;; ... but I only tested it on Mac OS X.
-	                (car (split-string (shell-command-to-string "hostname"))))))
-
+                (car (split-string (shell-command-to-string "hostname"))))))
 
 	(distel-setup))
 
 
-;; autocomplete: > git clone https://github.com/sebastiw/company-distel ~/.emacs/company-distel
+;; autocomplete: > git clone https://github.com/sebastiw/company-distel ~/.emacs.d/company-distel
 (defun setup-autocomplete ()
 	(with-eval-after-load 'company
 		(add-to-list 'company-backends 'company-distel))
