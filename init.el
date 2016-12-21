@@ -80,6 +80,7 @@
 
     ;; project navigation
     projectile
+    neotree
 
     ;; colorful parenthesis matching
     rainbow-delimiters
