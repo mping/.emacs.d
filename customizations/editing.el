@@ -76,23 +76,31 @@
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
-;; in iTerm -> remap modifier keys -> swap left command and left option
-;; then in keymappings ->
-;; add a key binding, *first* choose “do not remap modifiers” then type the actual shortcut
-;; it will appear as the “real” keys even if you swapped left alt and left cmd
-(add-hook 'after-make-frame-functions
-  (lambda ()
-    ;; if we're in terminal mode, rebind the Cmd to meta
-    (if (not (display-graphic-p))
-      (progn
-        
-        ))))
-
-
 (setq electric-indent-mode nil)
 
 ;; global enable company
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; rename current buffer
+;; C-x C-r
+(defun rename-current-buffer-file ()
+  "Renames current buffer and file it is visiting."
+  (interactive)
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (error "Buffer '%s' is not visiting a file!" name)
+      (let ((new-name (read-file-name "New name: " filename)))
+        (if (get-buffer new-name)
+            (error "A buffer named '%s' already exists!" new-name)
+          (rename-file filename new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil)
+          (message "File '%s' successfully renamed to '%s'"
+                   name (file-name-nondirectory new-name)))))))
+
+(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
 
 ;; company mode
 ;;(setq company-idle-delay nil) ; never start completions automatically
