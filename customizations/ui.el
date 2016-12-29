@@ -74,3 +74,7 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+;; neotree
+;; dont forget to install the fonts for all-the-icons
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
