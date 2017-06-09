@@ -29,8 +29,8 @@
 
 ;;(load-theme 'solarized t)
 
-;;(set-face-attribute 'default nil :family "SourceCodePro" :height 140 :weight 'normal)
-(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
+(set-face-attribute 'default nil :family "SourceCodePro" :height 130 :weight 'normal)
+;;(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
 (if (eq system-type 'darwin)
       (set-face-attribute 'default nil :family "Monaco" :height 130 :weight 'normal))
 

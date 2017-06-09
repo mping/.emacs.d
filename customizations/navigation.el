@@ -1,6 +1,8 @@
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 
+;; ensures dired sorts dot files and dirs first
+(setenv "LC_COLLATE" "C") 
 
 ;; "When several buffers visit identically-named files,
 ;; Emacs must give the buffers distinct names. The usual method
