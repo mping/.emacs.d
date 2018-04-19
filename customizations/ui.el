@@ -1,3 +1,4 @@
+
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements. Some useful customizations are
 ;; commented out, and begin with the line "CUSTOMIZE". These are more
@@ -29,10 +30,10 @@
 
 ;;(load-theme 'solarized t)
 
-(set-face-attribute 'default nil :family "SourceCodePro" :height 130 :weight 'normal)
+(set-face-attribute 'default nil :family "SourceCodePro" :height 120 :weight 'normal)
 ;;(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
 (if (eq system-type 'darwin)
-      (set-face-attribute 'default nil :family "Monaco" :height 130 :weight 'normal))
+      (set-face-attribute 'default nil :family "Monaco" :height 120 :weight 'normal))
 
 ;; lets try ST3 theme for a while...
 (load-theme 'monokai t)
