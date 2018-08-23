@@ -28,6 +28,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
 
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
 ;;(load-theme 'solarized t)
 
 (set-face-attribute 'default nil :family "SourceCodePro" :height 120 :weight 'normal)
@@ -36,7 +38,7 @@
       (set-face-attribute 'default nil :family "Monaco" :height 120 :weight 'normal))
 
 ;; lets try ST3 theme for a while...
-(load-theme 'monokai t)
+(load-theme 'flatui t)
 ;;(load-theme 'solarized t)
 
 ;; Uncomment the lines below by removing semicolons and play with the
