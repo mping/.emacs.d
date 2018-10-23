@@ -50,7 +50,9 @@
 
 ;; dired sorting
 ;; http://www.emacswiki.org/emacs/DiredSorting#toc1
-(setq insert-directory-program "gls" dired-use-ls-dired t)
+;; only if darwin
+(if (eq system-type 'darwin)
+	(setq insert-directory-program "gls" dired-use-ls-dired t))
 (setq dired-listing-switches "-aBhl  --group-directories-first")
 
 ;; Shows a list of buffers
