@@ -59,7 +59,6 @@
     ;; https://github.com/clojure-emacs/cider
     cider
 
-
     ;; complete anything mode
     company
 
@@ -168,7 +167,7 @@
  '(ls-lisp-use-insert-directory-program t)
  '(package-selected-packages
    (quote
-    (clj-refactor ag all-the-icons diredful tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell edts dired-details+ company-distel company clojure-mode-extra-font-locking cider anchored-transpose)))
+    (undo-tree clj-refactor ag all-the-icons diredful tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell edts dired-details+ company-distel company clojure-mode-extra-font-locking cider anchored-transpose)))
  '(safe-local-variable-values
    (quote
     ((eval add-hook
