@@ -9,7 +9,7 @@
 (menu-bar-mode -1)
 
 ;; Show line numbers
-(global-linum-mode)
+;; (global-linum-mode)
 
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
@@ -30,15 +30,15 @@
 
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
-;;(load-theme 'solarized t)
+(load-theme 'monokai t)
 
 (set-face-attribute 'default nil :family "SourceCodePro" :height 100 :weight 'normal)
 ;;(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
 (if (eq system-type 'darwin)
-    (set-face-attribute 'default nil :family "Monaco" :height 100 :weight 'normal))
+    (set-face-attribute 'default nil :family "Monaco" :height 120 :weight 'normal))
 
 ;; lets try ST3 theme for a while...
-(load-theme 'flatui t)
+;;(load-theme 'flatui t)
 ;;(load-theme 'solarized t)
 
 ;; Uncomment the lines below by removing semicolons and play with the

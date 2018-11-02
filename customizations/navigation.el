@@ -49,11 +49,22 @@
 (ido-ubiquitous-mode 1)
 
 ;; dired sorting
-;; http://www.emacswiki.org/emacs/DiredSorting#toc1
-;; only if darwin
-(if (eq system-type 'darwin)
-	(setq insert-directory-program "gls" dired-use-ls-dired t))
-(setq dired-listing-switches "-aBhl  --group-directories-first")
+;(setq dired-use-ls-dired  nil)
+;(setq insert-directory-program "/usr/local/bin/gls")
+;(setq dired-listing-switches "-aBhl  --group-directories-first")
+;;; cross platform unified ls
+(require 'ls-lisp)
+(setq dired-listing-switches "-alhG")
+(setq ls-lisp-use-insert-directory-program nil)
+(setq ls-lisp-ignore-case t)
+(setq ls-lisp-use-string-collate nil)
+;; customise the appearance of the listing
+(setq ls-lisp-verbosity '(links uid))
+(setq ls-lisp-format-time-list '("%b %e %H:%M" "%b %e  %Y"))
+(setq ls-lisp-use-localized-time-format t)
+(setq ls-lisp-dirs-first t)
+
+
 
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -71,6 +82,9 @@
 
 ;; projectile everywhere!
 (projectile-global-mode)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; neotree for project exploration
 (require 'neotree)

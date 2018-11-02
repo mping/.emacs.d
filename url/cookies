@@ -2,9 +2,16 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- 'nil)
+ '((".google.pt"
+  [url-cookie "1P_JAR" "2018-10-18-14" "Sat, 17-Nov-2018 14:01:37 GMT" "/" ".google.pt" nil]
+  [url-cookie "NID" "142=Rd-xU4y3v5B-Dq2mzMayR6QaWdG_ffsUGkbt1IzHSN_Y10O5Y-8nY-IREAX3Qho-oUwUWxOGUMkjJFy4o1_OeYI5_vdA9DCu-G8DbtuXzhfAt5KM3PmObxGrnplR94LDiojAqDsbrHnP0Df5N5SbFDnzuX3vYb92wN4M92BxF2g" "Fri, 19-Apr-2019 14:01:37 GMT" "/" ".google.pt" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Fri, 19-Apr-2019 04:56:13 GMT" "/complete/search" ".google.pt" nil]
+  [url-cookie "CGIC" "IgMqLyo" "Fri, 19-Apr-2019 04:56:13 GMT" "/search" ".google.pt" nil]))
+)
 (setq url-cookie-secure-storage
- 'nil)
+ '((".github.com"
+  [url-cookie "logged_in" "no" "Fri, 20 Aug 2038 11:00:25 -0000" "/" ".github.com" t]))
+)
 
 ;; Local Variables:
 ;; version-control: never

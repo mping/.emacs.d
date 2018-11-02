@@ -80,6 +80,7 @@
 ;; in iTerm, make sure Preferences->Profile->Keys says "left option key act as +Esc"
 (setq mac-option-modifier nil
       mac-command-modifier 'meta
+      mac-command-key-is-meta t
       x-select-enable-clipboard t)
 
 (setq electric-indent-mode nil)
