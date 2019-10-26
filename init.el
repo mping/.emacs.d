@@ -76,6 +76,7 @@
     projectile
     ag
     neotree
+    all-the-icons-dired
     all-the-icons ;; install fonts from https://github.com/domtronn/all-the-icons.el
 
     ;; colorful parenthesis matching
@@ -156,10 +157,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(clojure-align-forms-automatically t)
  '(coffee-tab-width 2)
+ '(custom-safe-themes
+   (quote
+    ("5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "2da65cb7074c176ca0a33f06bcc83ef692c9175e41b6370f5e94eb5811d6ee3a" "15348febfa2266c4def59a08ef2846f6032c0797f001d7b9148f30ace0d08bcf" default)))
  '(package-selected-packages
    (quote
-    (cider cider-eval-sexp-fu projectile-codesearch undo-tree tango-plus-theme tagedit smex rainbow-delimiters projectile parinfer paredit neotree monokai-theme magit ido-ubiquitous flatui-theme exec-path-from-shell company clojure-mode-extra-font-locking cider-decompile all-the-icons ag))))
+    (all-the-icons-dired cider cider-eval-sexp-fu projectile-codesearch undo-tree tango-plus-theme tagedit smex rainbow-delimiters projectile parinfer paredit neotree monokai-theme magit ido-ubiquitous flatui-theme exec-path-from-shell company clojure-mode-extra-font-locking cider-decompile all-the-icons ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

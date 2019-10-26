@@ -108,4 +108,25 @@
   (add-hook 'scheme-mode-hook #'parinfer-mode)
   (add-hook 'lisp-mode-hook #'parinfer-mode)
 
-  (parinfer--switch-to-indent-mode))
+  (parinfer--switch-to-indent-mode)
+
+
+;;;;
+;; sayid
+;; http://clojure-emacs.github.io/sayid/#installation
+;;
+ (eval-after-load 'clojure-mode
+   '(sayid-setup-package)))
+
+
+;;;;
+;; C-c r calls user/reset
+(defun cider-repl-reset ()
+  (interactive)
+  (save-some-buffers)
+  (with-current-buffer (cider-current-repl-buffer)
+    (goto-char (point-max))
+    (insert "(user/reset)")
+    (cider-repl-return)))
+
+(global-set-key (kbd "C-c r") 'cider-repl-reset)

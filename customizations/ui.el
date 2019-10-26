@@ -32,10 +32,10 @@
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 (load-theme 'monokai t)
 
-(set-face-attribute 'default nil :family "SourceCodePro" :height 100 :weight 'normal)
+(set-face-attribute 'default nil :family "Fira Code" :height 120 :weight 'normal)
 ;;(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
 (if (eq system-type 'darwin)
-    (set-face-attribute 'default nil :family "Monaco" :height 120 :weight 'normal))
+    (set-face-attribute 'default nil :family "Fira Code" :height 120 :weight 'normal))
 
 ;; lets try ST3 theme for a while...
 ;;(load-theme 'flatui t)
@@ -81,3 +81,16 @@
 ;; neotree
 ;; dont forget to install the fonts for all-the-icons
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+;; auto expand neotree
+(defun neotree-resize-window (&rest _args)
+  "Resize neotree window. https://github.com/jaypei/emacs-neotree/pull/110"
+  (interactive)
+  (neo-buffer--with-resizable-window
+   (let ((fit-window-to-buffer-horizontally t))
+     (fit-window-to-buffer))))
+
+(add-hook 'neo-change-root-hook #'neotree-resize-window)
+(add-hook 'neo-enter-hook #'neotree-resize-window)
+
+;(all-the-icons-dired-mode 1)
