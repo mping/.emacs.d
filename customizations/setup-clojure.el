@@ -112,14 +112,6 @@
 
 
 ;;;;
-;; sayid
-;; http://clojure-emacs.github.io/sayid/#installation
-;;
- (eval-after-load 'clojure-mode
-   '(sayid-setup-package)))
-
-
-;;;;
 ;; C-c r calls user/reset
 (defun cider-repl-reset ()
   (interactive)
