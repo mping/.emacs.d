@@ -85,6 +85,8 @@
     ;; edit html tags like sexps
     tagedit
 
+    undo-tree
+
     ;; git integration
     magit))
 

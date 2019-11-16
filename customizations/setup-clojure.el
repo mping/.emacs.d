@@ -108,7 +108,7 @@
   (add-hook 'scheme-mode-hook #'parinfer-mode)
   (add-hook 'lisp-mode-hook #'parinfer-mode)
 
-  (parinfer--switch-to-indent-mode)
+  (parinfer--switch-to-indent-mode))
 
 
 ;;;;
