@@ -32,10 +32,10 @@
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 (load-theme 'monokai t)
 
-(set-face-attribute 'default nil :family "Fira Code" :height 120 :weight 'normal)
+(set-face-attribute 'default nil :family "Fira Code" :height 100 :weight 'normal)
 ;;(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
 (if (eq system-type 'darwin)
-    (set-face-attribute 'default nil :family "Fira Code" :height 120 :weight 'normal))
+    (set-face-attribute 'default nil :family "Fira Code" :height 100 :weight 'normal))
 
 ;; lets try ST3 theme for a while...
 ;;(load-theme 'flatui t)
@@ -81,16 +81,18 @@
 ;; neotree
 ;; dont forget to install the fonts for all-the-icons
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+(setq neo-window-fixed-size nil)
 
 ;; auto expand neotree
-(defun neotree-resize-window (&rest _args)
-  "Resize neotree window. https://github.com/jaypei/emacs-neotree/pull/110"
-  (interactive)
-  (neo-buffer--with-resizable-window
-   (let ((fit-window-to-buffer-horizontally t))
-     (fit-window-to-buffer))))
-
-(add-hook 'neo-change-root-hook #'neotree-resize-window)
-(add-hook 'neo-enter-hook #'neotree-resize-window)
+;; Set the neo-window-width to the current width of the
+;; neotree window, to trick neotree into resetting the
+;; width back to the actual window width.
+;; Fixes: https://github.com/jaypei/emacs-neotree/issues/262
+(eval-after-load "neotree"
+  '(add-to-list 'window-size-change-functions
+                (lambda (frame)
+                  (let ((neo-window (neo-global--get-window)))
+                    (unless (null neo-window)
+                      (setq neo-window-width (window-width neo-window)))))))
 
 ;(all-the-icons-dired-mode 1)
