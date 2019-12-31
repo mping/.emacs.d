@@ -1,0 +1,3 @@
+[submodule "sidebar.el"]
+	path = sidebar.el
+	url = https://github.com/sebastiencs/sidebar.el.git

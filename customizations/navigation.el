@@ -94,3 +94,13 @@
 (setq neo-smart-open t)
 ;;When running ‘projectile-switch-project’ (C-c p p), ‘neotree’ will change root automatically. 
 (setq projectile-switch-project-action 'neotree-projectile-action)
+
+
+;;;; sidebar.el
+;; git submodule add https://github.com/sebastiencs/sidebar.el.git 
+;; TODO move icons-in-terminal to a submodule too
+(add-to-list 'load-path "~/.local/share/icons-in-terminal/") ;; If it's not already done
+(add-to-list 'load-path "~/.emacs.d/sidebar.el")
+(require 'sidebar)
+(global-set-key (kbd "C-x C-f") 'sidebar-open)
+(global-set-key (kbd "C-x C-a") 'sidebar-buffers-open)

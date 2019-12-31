@@ -87,6 +87,14 @@
 
     undo-tree
 
+    ;; sidebar stuff
+    dash
+    dash-functional
+    s
+    ov
+    projectile
+    frame-local ;;required from icons-in-terminal
+
     ;; git integration
     magit))
 
@@ -127,6 +135,9 @@
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
 (add-to-list 'load-path "~/.emacs.d/customizations")
+
+;; required by icons-in-terminal
+(load "font-lock-plus.el")
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
