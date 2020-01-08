@@ -9,6 +9,7 @@ I added my own settings:
 git clone https://github.com/mping/.emacs.d ~/.emacs.d
 cd ~/.emacs.d
 git submodule init # for sidebar.el
+git submodule update
 ```
 
 ----
