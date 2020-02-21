@@ -2,6 +2,10 @@
 ;; Clojure
 ;;;;
 
+;; enable eldoc 
+(add-hook 'cider-mode-hook #'eldoc-mode)
+(add-hook 'cider-repl-mode-hook #'eldoc-mode)
+
 ;; Enable paredit for Clojure
 (add-hook 'clojure-mode-hook 'enable-paredit-mode)
 
@@ -111,6 +115,11 @@
   (parinfer--switch-to-indent-mode))
 
 
+;;; clj-kondo
+;;  dont forget to > npm i -g clj-kondo
+(require 'flycheck-clj-kondo)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;;;;
 ;; C-c r calls user/reset
 (defun cider-repl-reset ()
@@ -118,7 +127,19 @@
   (save-some-buffers)
   (with-current-buffer (cider-current-repl-buffer)
     (goto-char (point-max))
-    (insert "(user/reset)")
+    ;;(insert "(user/reset)")
     (cider-repl-return)))
 
 (global-set-key (kbd "C-c r") 'cider-repl-reset)
+
+
+;;;
+;; jack-in with profile
+(defun cider-jack-in-with-profile ()
+  (interactive)
+  (letrec ((profile (read-string "Enter profile name: "))
+           (lein-params (concat "with-profile +" profile " repl :headless")))
+    (message "lein-params set to: %s" lein-params)
+    (set-variable 'cider-lein-parameters lein-params)
+    ;; just a empty parameter
+    (cider-jack-in '())))

@@ -114,3 +114,8 @@
 ;;(global-set-key (kbd "M-TAB") #'company-complete) ; use meta+tab, aka C-M-i, as manual trigger
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
+
+;; make emacs use the clipboard if running in X
+(when window-system
+  (setq select-enable-clipboard t
+        interprogram-paste-function 'x-cut-buffer-or-selection-value))

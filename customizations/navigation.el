@@ -46,7 +46,7 @@
 
 ;; This enables ido in all contexts where it could be useful, not just
 ;; for selecting buffer and file names
-(ido-ubiquitous-mode 1)
+;; (ido-ubiquitous-mode 1)
 
 ;; dired sorting
 ;(setq dired-use-ls-dired  nil)
@@ -104,3 +104,8 @@
 (require 'sidebar)
 (global-set-key (kbd "C-x C-f") 'sidebar-open)
 (global-set-key (kbd "C-x C-a") 'sidebar-buffers-open)
+
+;; https://www.emacswiki.org/emacs/WindMove
+;; use shift+arrow keys
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))

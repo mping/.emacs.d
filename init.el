@@ -95,6 +95,13 @@
     projectile
     frame-local ;;required from icons-in-terminal
 
+    ;; org mode
+    org
+
+    ;;clj-kondo flycheck
+    flycheck
+    flycheck-clj-kondo
+
     ;; git integration
     magit))
 
@@ -165,6 +172,7 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-markdown.el")
+(load "setup-org.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -174,10 +182,10 @@
  '(coffee-tab-width 2)
  '(custom-safe-themes
    (quote
-    ("5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "2da65cb7074c176ca0a33f06bcc83ef692c9175e41b6370f5e94eb5811d6ee3a" "15348febfa2266c4def59a08ef2846f6032c0797f001d7b9148f30ace0d08bcf" default)))
+    ("392395ee6e6844aec5a76ca4f5c820b97119ddc5290f4e0f58b38c9748181e8d" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" "a63355b90843b228925ce8b96f88c587087c3ee4f428838716505fd01cf741c8" "cf08ae4c26cacce2eebff39d129ea0a21c9d7bf70ea9b945588c1c66392578d1" "5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "2da65cb7074c176ca0a33f06bcc83ef692c9175e41b6370f5e94eb5811d6ee3a" "15348febfa2266c4def59a08ef2846f6032c0797f001d7b9148f30ace0d08bcf" default)))
  '(package-selected-packages
    (quote
-    (lispy all-the-icons-dired cider cider-eval-sexp-fu projectile-codesearch undo-tree tango-plus-theme tagedit smex rainbow-delimiters projectile parinfer paredit neotree monokai-theme magit ido-ubiquitous flatui-theme exec-path-from-shell company clojure-mode-extra-font-locking cider-decompile all-the-icons ag))))
+    (intellij-theme all-the-icons-dired cider cider-eval-sexp-fu projectile-codesearch undo-tree tango-plus-theme tagedit smex rainbow-delimiters projectile parinfer paredit neotree monokai-theme magit flatui-theme exec-path-from-shell company clojure-mode-extra-font-locking cider-decompile all-the-icons ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
