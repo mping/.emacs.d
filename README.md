@@ -5,8 +5,12 @@ I added my own settings:
 * erlang stuff (make sure to view ~/.emacs.d/customizations/setup-erlang.el, you will need to install and compile stuff)
 * removed stuff that I don't use
 
-Just git clone https://github.com/mping/.emacs.d ~/.emacs.d
-
+```
+git clone https://github.com/mping/.emacs.d ~/.emacs.d
+cd ~/.emacs.d
+git submodule init # for sidebar.el
+git submodule update
+```
 
 ----
 
