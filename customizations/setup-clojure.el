@@ -2,6 +2,8 @@
 ;; Clojure
 ;;;;
 
+;; (setenv "JAVA_CMD" "/home/mping/.asdf/shims/java")
+
 ;; enable eldoc 
 (add-hook 'cider-mode-hook #'eldoc-mode)
 (add-hook 'cider-repl-mode-hook #'eldoc-mode)

@@ -20,6 +20,10 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
+;; smooth scrolling line by line
+(setq scroll-step            1
+      scroll-conservatively  10000)
+
 ;; Color Themes
 ;; Read http://batsov.com/articles/2012/02/19/color-theming-in-emacs-reloaded/
 ;; for a great explanation of emacs color themes.
@@ -30,16 +34,14 @@
 
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
-(load-theme 'monokai t)
 
 (set-face-attribute 'default nil :family "Fira Code" :height 100 :weight 'normal)
 ;;(set-face-attribute 'default nil :family "UbuntuMono" :height 130 :weight 'normal)
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :family "Fira Code" :height 100 :weight 'normal))
 
-;; lets try ST3 theme for a while...
-;;(load-theme 'flatui t)
-;;(load-theme 'solarized t)
+(load-theme 'doom-dracula t)
+
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height

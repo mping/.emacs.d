@@ -85,6 +85,7 @@
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(setq projectile-project-search-path '("~/Devel/workspace"))
 
 ;; neotree for project exploration
 (require 'neotree)
@@ -102,8 +103,8 @@
 (add-to-list 'load-path "~/.local/share/icons-in-terminal/") ;; If it's not already done
 (add-to-list 'load-path "~/.emacs.d/sidebar.el")
 (require 'sidebar)
-(global-set-key (kbd "C-x C-f") 'sidebar-open)
-(global-set-key (kbd "C-x C-a") 'sidebar-buffers-open)
+(global-set-key (kbd "C-x C-a") 'sidebar-open)
+(global-set-key (kbd "C-x C-f") 'sidebar-buffers-open)
 
 ;; https://www.emacswiki.org/emacs/WindMove
 ;; use shift+arrow keys
