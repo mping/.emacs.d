@@ -42,6 +42,9 @@
 
 (load-theme 'doom-dracula t)
 
+;; Apply treemacs customization for Kaolin themes, requires the all-the-icons package.
+(kaolin-treemacs-theme)
+
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
